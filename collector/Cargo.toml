@@ -1,0 +1,9 @@
+[package]
+name = "jouled"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+joule-store = { path = "../store" }
+libc = "0.2"
+serde_json = "1"

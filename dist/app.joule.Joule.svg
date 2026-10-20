@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <clipPath id="tile"><rect x="8" y="8" width="112" height="112" rx="28"/></clipPath>
+    <linearGradient id="battery" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3bd4e" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f3bd4e" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="plugged" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5fd08a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#5fd08a" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="#151417"/>
+  <g clip-path="url(#tile)">
+    <path d="M8 40 L62 84 V120 H8 Z" fill="url(#battery)"/>
+    <path d="M62 84 L92 44 H120 V120 H62 Z" fill="url(#plugged)"/>
+    <path d="M8 40 L62 84" fill="none" stroke="#f3bd4e" stroke-width="7" stroke-linecap="round"/>
+    <path d="M62 84 L92 44 H120" fill="none" stroke="#5fd08a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <circle cx="62" cy="84" r="8" fill="#151417"/>
+  <circle cx="62" cy="84" r="4.5" fill="#fafcfb"/>
+</svg>

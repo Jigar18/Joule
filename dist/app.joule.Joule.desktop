@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Joule
+Comment=Battery and screen time history
+Exec=joule
+Icon=app.joule.Joule
+Terminal=false
+Categories=Utility;System;Monitor;
+Keywords=battery;screen time;usage;power;
+StartupWMClass=app.joule.Joule

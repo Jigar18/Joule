@@ -1,0 +1,10 @@
+[package]
+name = "joule"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+joule-store = { path = "../store" }
+gtk = { package = "gtk4", version = "0.11", features = ["v4_16"] }
+adw = { package = "libadwaita", version = "0.9", features = ["v1_6"] }
+pangocairo = "0.22"

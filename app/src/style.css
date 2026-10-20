@@ -1,0 +1,209 @@
+window {
+  background: var(--window-bg-color);
+  color: var(--window-fg-color);
+  font-family: monospace;
+  font-size: 13px;
+  --border-color: color-mix(in srgb, var(--window-fg-color) 16%, transparent);
+  --dim-color: color-mix(in srgb, var(--window-fg-color) 55%, transparent);
+}
+
+.dashboard {
+  padding: 20px 22px 14px;
+}
+
+.dim {
+  color: var(--dim-color);
+}
+
+.wordmark {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.power-state {
+  letter-spacing: 0.06em;
+}
+
+.swatch {
+  min-width: 8px;
+  min-height: 8px;
+}
+
+.swatch.plugged {
+  background: var(--plugged-color);
+}
+
+.swatch.on-battery {
+  background: var(--on-battery-color);
+}
+
+.swatch.screen-off {
+  background: color-mix(in srgb, var(--window-fg-color) 22%, black);
+  border: 1px solid color-mix(in srgb, var(--window-fg-color) 30%, transparent);
+}
+
+.swatch.in-focus {
+  background: var(--accent-bg-color);
+}
+
+.swatch.in-memory {
+  background: color-mix(in srgb, var(--accent-bg-color) 50%, transparent);
+}
+
+/* Day cells and session chips share the control states of Omarchy's shell. */
+button.day,
+button.chip {
+  min-width: 0;
+  min-height: 0;
+  color: var(--window-fg-color);
+  background: color-mix(in srgb, var(--window-fg-color) 4%, transparent);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: none;
+  outline: none;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+button.day:hover,
+button.chip:hover {
+  background: color-mix(in srgb, var(--window-fg-color) 8%, transparent);
+  border-color: color-mix(in srgb, var(--window-fg-color) 32%, transparent);
+}
+
+button.day:checked,
+button.day:checked:hover,
+button.chip.selected,
+button.chip.selected:hover {
+  background: color-mix(in srgb, var(--accent-bg-color) 14%, transparent);
+  border-color: var(--accent-bg-color);
+}
+
+button.day {
+  padding: 8px 10px;
+}
+
+.day .weekday {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  color: var(--dim-color);
+}
+
+.day .date {
+  font-size: 11px;
+  color: var(--dim-color);
+}
+
+.day .screen-time {
+  font-size: 12px;
+  font-feature-settings: "tnum";
+}
+
+button.chip {
+  padding: 3px 10px;
+  font-size: 12px;
+  font-feature-settings: "tnum";
+}
+
+.panel {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 14px 12px 10px;
+}
+
+/* The background fill is what interrupts the panel's top border. */
+.panel-title,
+.panel-notch {
+  padding: 0 8px;
+  background: var(--window-bg-color);
+  font-size: 11px;
+  color: var(--dim-color);
+}
+
+.panel-title {
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.caption,
+.stat-label {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  color: var(--dim-color);
+}
+
+.total {
+  font-size: 40px;
+  font-weight: bold;
+  font-feature-settings: "tnum";
+}
+
+.stats {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.stats separator {
+  min-width: 1px;
+  background: var(--border-color);
+}
+
+.stat {
+  padding: 8px 14px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: bold;
+  font-feature-settings: "tnum";
+}
+
+.app-list {
+  background: transparent;
+}
+
+.app-list row {
+  padding: 0;
+  background: transparent;
+}
+
+.app-row {
+  padding: 6px 8px;
+}
+
+.app-name,
+.app-time {
+  font-weight: bold;
+}
+
+.app-time {
+  font-feature-settings: "tnum";
+}
+
+.tag {
+  padding: 0 6px;
+  font-size: 10px;
+  color: var(--dim-color);
+  background: color-mix(in srgb, var(--window-fg-color) 4%, transparent);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.placeholder {
+  padding: 36px;
+  color: color-mix(in srgb, var(--window-fg-color) 45%, transparent);
+}
+
+.hints {
+  font-size: 11px;
+  color: var(--dim-color);
+}
+
+.key {
+  padding: 0 5px;
+  font-size: 11px;
+  border: 1px solid color-mix(in srgb, var(--window-fg-color) 25%, transparent);
+  border-radius: var(--radius);
+}
